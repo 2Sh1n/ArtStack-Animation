@@ -2,9 +2,9 @@
 
 <head>
    
-    <title>Data Science Portal | Login | Sign Up</title>
-    <meta name="author" content="Data Science">
-    <meta name="title" content="Data Science Portal | Login | Sign Up" />
+    <title>ArtStack| Login | Sign Up</title>
+    <meta name="author" content="ArtStack">
+    <meta name="title" content="ArtStack | Login | Sign Up" />
     <meta name="description" content="We offer complete resources for data science, which helps students in their academics as well as aspiring data scientist to learn data science in depth">   
     <meta name="keywords" content="login data science portal, data scientist, data science, what is data scientist, data scientist course, data science course, free data science course">     
     <meta http-equiv="refresh" content="100">
@@ -18,7 +18,7 @@
 <body>
     <div class="container" id="container">
         <div class="form-container  sign-up-container">
-            <form action="#">
+            <form action="connect.php" method="post">
                 <div class="header">Sign Up</div>
                 <div class="social__media__container">
                     <a href="#" target="_blank" class="social codepen">
@@ -38,19 +38,19 @@
 
                 <div class="button-input-group">
                     <div class="group input-group">
-                        <input type="text" placeholder="Name" required>
+                        <input type="text" placeholder="Name" id="name" name="name" required>
                     </div>
                     <div class="group input-group">
-                        <input type="email" placeholder="Email" required>
+                        <input type="email" placeholder="Email" id="email" name="email" required>
                     </div>
                     <div class="group input-group">
-                        <input type="password" placeholder="Password" required pattern=".{8,}">
+                        <input type="password" placeholder="Password" id="password" name="password" required pattern=".{8,}">
                     </div>
                     <div class="alert-text signup__alert">
                         <span class="help__text">At least 8 character</span>
                     </div>
                     <div class="group button-group">
-                        <button class="signup-btn" onclick="return false;">Sign Up</button>
+                        <button type="submit" class="signup-btn" >Sign Up</button>
                     </div>
                 </div>
 
