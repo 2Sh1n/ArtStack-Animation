@@ -9,9 +9,7 @@
 
 <body>
 
-<h3 class="heading"> ArtStack </h3>
-
-<div class="container">
+<div class="container1">
     <div class="main-video">
         <div class="video">
             <video src="videos/How to animate FASTER.mp4" controls autoplay></video>
@@ -66,7 +64,7 @@
 
     <script>
     let listVideo = document.querySelectorAll('.video-list .vid');
-    let mainVideo = document.querySelector('.main-video .video');
+    let mainVideo = document.querySelector('.main-video video');
     let title = document.querySelector('.main-video .title');
 
     listVideo.forEach(video =>{
@@ -75,7 +73,7 @@
             video.classList.add('active');
             if(video.classList.contains('active')){
                 let src = video.children[0].getAttribute('src');
-                mainVideo.src =src;
+                mainVideo.src = src;
                 let text = video.children[1].innerHTML;
                 title.innerHTML = text;
             };

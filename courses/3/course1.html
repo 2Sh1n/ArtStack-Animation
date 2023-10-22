@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="c1.css">
+</head>
+
+<body>
+
+<div class="container1">
+    <div class="main-video">
+        <div class="video">
+            <video src="videos/How to animate FASTER.mp4" controls autoplay></video>
+            <h3 class="title">How to animate FASTER</h3>
+        </div>
+    </div>
+
+    <div class="video-list">
+        <div class="vid">
+            <video src="videos/Why your animation looks unnatural!.mp4" muted></video>
+            <h3 class="title">Why your animation looks unnatural!</h3>
+        </div>
+        <div class="vid">
+            <video src="videos/How to animate a HEAD TURN.mp4" muted></video>
+            <h3 class="title">How to animate a HEAD TURN</h3>
+        </div>
+        <div class="vid">
+            <video src="videos/How to animate a walk cycle!.mp4" muted></video>
+            <h3 class="title">How to animate a walk cycle!</h3>
+        </div>
+        <div class="vid">
+            <video src="videos/How to have patience when animating.mp4" muted></video>
+            <h3 class="title">How to have patience when animating</h3>
+        </div>
+        <div class="vid">
+            <video src="videos/How to animate a laugh!.mp4" muted></video>
+            <h3 class="title">How to animate a laugh!</h3>
+        </div>
+        <div class="vid">
+            <video src="videos/How to animate an animal walk cycle!.mp4" muted></video>
+            <h3 class="title">How to animate an animal walk cycle!</h3>
+        </div>
+        <div class="vid">
+            <video src="videos/Guide to MAPS │Animation on Youtube.mp4" muted></video>
+            <h3 class="title">Guide to MAPS │Animation on Youtube</h3>
+        </div>
+        <div class="vid">
+            <video src="videos/How to animate a HUMAN RUN CYCLE.mp4" muted></video>
+            <h3 class="title">How to animate a HUMAN RUN CYCLE</h3>
+        </div>
+        <div class="vid">
+            <video src="videos/How many frames should you animate with.mp4" muted></video>
+            <h3 class="title">How many frames should you animate with</h3>
+        </div>
+        <div class="vid">
+            <video src="videos/Lip Sync Guide! │What every animator should know.mp4" muted></video>
+            <h3 class="title">Lip Sync Guide! │What every animator should know</h3>
+        </div>
+    </div>
+
+</div>
+
+    <script>
+    let listVideo = document.querySelectorAll('.video-list .vid');
+    let mainVideo = document.querySelector('.main-video video');
+    let title = document.querySelector('.main-video .title');
+
+    listVideo.forEach(video =>{
+        video.onclick = () =>{
+            listVideo.forEach(vid => vid.classList.remove('active'));
+            video.classList.add('active');
+            if(video.classList.contains('active')){
+                let src = video.children[0].getAttribute('src');
+                mainVideo.src = src;
+                let text = video.children[1].innerHTML;
+                title.innerHTML = text;
+            };
+        };
+    });
+    </script>
+</body>
+</html>
